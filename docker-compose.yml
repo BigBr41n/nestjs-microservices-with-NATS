@@ -14,8 +14,6 @@ services:
     volumes:
       - ./users-microservice/src:/usr/src/app/src
     command: pnpm run start:dev
-    depends_on:
-      - gateway
 
   payments-microservice:
     build: ./users-microservice
