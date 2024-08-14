@@ -17,7 +17,6 @@ export class UsersController {
 
   @Post()
   createUser(@Body() createUserDto: CreateUserDto) {
-    console.log(createUserDto);
     return this.natsClient.send({ cmd: 'createUser' }, createUserDto);
   }
 
